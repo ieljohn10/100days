@@ -1,6 +1,8 @@
 import './App.css'
-import TodoList from './projects/todo-list'
-import React, { createContext, useState } from 'react';
+// import TodoList from './projects/todo-list'
+import { createContext, useState } from 'react';
+// import Calculator from './projects/calculator';
+import Calc from './projects/Calc';
 export const ListContext = createContext();
 
 function App() {
@@ -16,7 +18,9 @@ function App() {
 
   return (
     <ListContext.Provider value={globalState}> 
-      <TodoList />
+      {/* <TodoList /> */}
+      {/* <Calculator /> */}
+      <Calc />
     </ListContext.Provider>
   )
 }
