@@ -1,0 +1,42 @@
+.Content{
+  // height: 100vh;
+  width: 100%;
+
+  input{
+    margin: 10px 0;
+    width: 100%;
+    font-size: 30px;
+  }
+
+  .btn-container{
+    display: grid;
+    column-gap: 15px;
+    grid-template-columns: repeat(3, 1fr); 
+ 
+    .calc-num-container{
+      width: 100%;
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .calc-operator-container{
+      width: 100%;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+
+    }
+
+    .other-btnContainer{
+      width: 100%;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+
+  .btn{
+    height: max-content;
+    width: 100%;
+    font-size: 20px;
+  }
+}
