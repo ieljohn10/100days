@@ -1,6 +1,6 @@
+import './simple-calculator.scss'
 import CalcButton from '../../components/CalcButton';
 import { useEffect, useRef, useState } from 'react';
-import './simple-calculator.scss';
 
 export default function SimpleCalculator() {
   const [numVal, setNumVal] = useState('');
@@ -33,6 +33,11 @@ export default function SimpleCalculator() {
     }
   ];
 
+  const handleInput = (number) => {
+    setNumVal((prevVal) => prevVal + number)
+    console.log(number)
+  }
+
   const BtnNumLength = () => {
     const numArr = Array(10).fill(null)
     const comp = numArr.map((item, index) => (
@@ -40,17 +45,14 @@ export default function SimpleCalculator() {
         name={`btn calc-btn-${index}`}
         key={index}
         value={index}
-        onClick={() => handleInput(`${index}`)}
+        onClick={() => handleInput(index)}
       />
     )).reverse()
 
     return comp;
   }
 
-  const handleInput = (number) => {
-    setNumVal((prevVal) => prevVal + number)
-    console.log('object')
-  }
+  
 
   const handleOperator = (operator) => {
     if((numVal || secondNumVal) !== '' && null){
@@ -138,11 +140,10 @@ export default function SimpleCalculator() {
     <div className="Content">
       <input 
         className='calc-input'
-        // onChange={e => handleInput(e)}  
         ref={inputRef} 
         placeholder='0' 
         type="text" 
-        // dir='rtl'
+        dir='rtl'
         pattern=''
         value={numVal}
         readOnly
@@ -172,6 +173,7 @@ export default function SimpleCalculator() {
         <div className="other-btnContainer">
           <CalcButton name='btn total' value='=' onClick={handleResult}/>
           <CalcButton name='btn clear' value='C' onClick={handleClear}/>
+          <button onClick={() => handleInput(2)}>test</button>
         </div>
       </div>
     </div>

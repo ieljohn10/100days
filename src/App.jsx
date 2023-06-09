@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react';
-import SimpleCalculator from './projects/SimpleCalculator';
+import WeatherApp from './projects/WeatherApp';
 export const ListContext = createContext();
 import './App.css'
 
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <ListContext.Provider value={globalState}> 
-      <SimpleCalculator />
+      <WeatherApp />      
     </ListContext.Provider>
   )
 }
