@@ -2,6 +2,8 @@ import { createContext, useState } from 'react';
 import WeatherApp from './projects/WeatherApp';
 export const ListContext = createContext();
 import './App.css'
+import Login from './pages/Login';
+import Authentication from './projects/Authentication';
 
 function App() {
   const [list, setList] = useState([]);
@@ -16,7 +18,7 @@ function App() {
 
   return (
     <ListContext.Provider value={globalState}> 
-      <WeatherApp />      
+      <Authentication />     
     </ListContext.Provider>
   )
 }
