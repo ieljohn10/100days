@@ -7,8 +7,19 @@
   background-color: #0093E9;
   color: rgba(255, 255, 255, 0.87);
 
+  .circle{
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    height: 300px;
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border-radius: 50%;
+
+  }
+
   .container{
-    height: 60%;
+    height: 50%;
     width: 80%;
     border-radius: 12px;
     display: flex;
@@ -21,40 +32,60 @@
     -webkit-backdrop-filter: blur( 1px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-
+    transition: all .5s;
+    
     .switch-container{
+      position: relative;
       padding: 0.2em;
       width: 80%;
       display: flex;
+      justify-content: space-evenly;
       border: 1px solid rgba( 255, 255, 255, 0.15 );
       border-radius: 12px;
       // overflow: hidden;
-      transition: opacity .25s ease 2s;
 
       span{
-        width: 300px;
+        width: 100%;
         text-align: center;
         border-radius: 10px;
+        z-index: 90;
+        font-weight: 600;
+        color: #000000e8;
+        // color: rgba(255, 255, 255, 0.87);
       }
 
       .active{
         // background: rgba( 255, 255, 255, 0.15 );
         background-color: rgba(255, 255, 255, 0.87);
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        color: #000000e8;
+        transform: translateX(-50%);
+        transition: all .5s;
+      }
+      
+      .toggle{
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.87);
+        transition: all .5s;
         box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
         backdrop-filter: blur( 1px );
         -webkit-backdrop-filter: blur( 1px );
         border-radius: 10px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
-        -webkit-transition: all .5s;
-        -moz-transition: all .5s;
         color: #000000e8;
-        animation-name: show-tab;
-        animation-duration: 1s;
-        transition: opacity .5s ease 0s;
-        transition: color 0.15s ease-in;
+
+        &.active{
+          transform: translateX(99%);
+          color: #000000e8;
+        }
       }
-
-
+      
     }
   }
 }

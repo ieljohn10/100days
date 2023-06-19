@@ -1,7 +1,4 @@
-.login{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.signup{
 
   .form{
     margin-bottom: 10%;
@@ -15,17 +12,17 @@
       color: rgb(0 0 0);
       font-size: 700;
     }
+     
 
     .input-item{
-      margin-bottom: 20px;
+      // margin-bottom: 10px;
       border-top: none;
       border-left: none;
       border-right: none;
       border-bottom: 1px solid #0000004f;
       
       input{
-        width: 100%;
-        padding: 5px;
+        padding: 10px;
         font-size: 1rem;
         background-color: transparent;
         outline: none;
@@ -36,18 +33,10 @@
         }
       }
     }
-    
-    .password-item{
-      display: flex;
-      align-items: center;
-
-      .show-password-icon{
-        margin-left: 10px;
-      }
-    }
   }
 
-  .login-btn{
+  .signup-btn{
+    margin-top: 30px;
     padding: 10px;
     width: 100%;
     border-radius: 12px;
