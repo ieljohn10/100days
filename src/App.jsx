@@ -2,8 +2,10 @@ import { createContext, useState } from 'react';
 // import WeatherApp from './projects/WeatherApp';
 export const ListContext = createContext();
 import './App.css'
+import Movie from './pages/Movie';
+// import Training from './pages/Javascript';
 // import Login from './pages/Login';
-import Authentication from './projects/Authentication';
+// import Authentication from './projects/Authentication';
 
 function App() {
   const [list, setList] = useState([]);
@@ -18,7 +20,8 @@ function App() {
 
   return (
     <ListContext.Provider value={globalState}> 
-      <Authentication />     
+      {/* <Authentication />      */}
+      <Movie />
     </ListContext.Provider>
   )
 }
